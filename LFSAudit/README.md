@@ -1,4 +1,4 @@
-# GHES / GHEC LFS Auditor
+# GHES LFS Auditor
 
 The following Go application is used to audit repositories containing LFS files.
 
@@ -16,13 +16,9 @@ go build .
 
 ## Usage
 
-To run an audit against repositories within a GHEC organization, run the following:
+If you have multiple organizations, you may need to run this against each org.
 
-```bash
-./LFSAudit --org-name=<org> --pat-token=<pat-token>
-```
-
-To run an audit against repositories within a GHES organization, run the following:
+To run an audit against repositories within a GitHub Enterprise Server organization, run the following:
 
 ```bash
 ./LFSAudit --org-name=<org> --pat-token=<pat-token> --is-enterprise-server=<true or false> --enterprise-server-url=<serverbaseurl/api/v3>
@@ -30,4 +26,4 @@ To run an audit against repositories within a GHES organization, run the followi
 
 ## Notes
 
-> This script checks for any repositories containing .gitattributes files. While most repos with LFS contain this file, not all of them will have LFS enabled. It's a good starting point though
+> This script checks for any repositories containing .gitattributes files. While most repos with LFS contain this file, not all of them will have LFS enabled. It's a good starting point though.
